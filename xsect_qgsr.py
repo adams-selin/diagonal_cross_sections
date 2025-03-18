@@ -18,7 +18,7 @@ def xsect_km(x1,y1,x2,y2,dx,dy):
 
 def xsect_2d(x1,y1,x2,y2,t,n):
      #x1,y1,x2,y2 endpoints; t dataset; n #gridpoints either side you want averaged
-     m = np.float(y2-y1) / (x2-x1)
+     m = float(y2-y1) / (x2-x1)
      totalz = ((x2-x1)**2. + (y2-y1)**2.)**0.5
      num_gpts =  np.floor(totalz)
      z = (np.arange(num_gpts)+1)*(totalz / num_gpts)
@@ -60,7 +60,7 @@ def xsect_2d(x1,y1,x2,y2,t,n):
 
 def xsect_3d(x1,y1,x2,y2,t,n):
      #x1,y1,x2,y2 endpoints; t dataset; n #gridpoints either side you want averaged
-     m = np.float(y2-y1) / (x2-x1)
+     m = float(y2-y1) / (x2-x1)
      totalz = ((x2-x1)**2. + (y2-y1)**2.)**0.5
      num_gpts =  np.floor(totalz)
      z = (np.arange(num_gpts)+1)*(totalz / num_gpts)
@@ -101,7 +101,7 @@ def xsect_3d(x1,y1,x2,y2,t,n):
      return newt;
 
 def xsect_3d_noavg(x1,y1,x2,y2,t):
-     m = np.float(y2-y1) / (x2-x1)
+     m = float(y2-y1) / (x2-x1)
      totalz = ((x2-x1)**2. + (y2-y1)**2.)**0.5
      num_gpts =  np.floor(totalz)
      z = (np.arange(num_gpts)+1)*(totalz / num_gpts)
